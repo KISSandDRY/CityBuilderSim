@@ -1,0 +1,29 @@
+.wrap { display: flex; flex-direction: column; gap: 1rem; }
+.progressList { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.objList { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.objItem {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--bg3);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 0.88rem;
+  transition: background 0.15s;
+  cursor: default;
+}
+.objItem:hover { background: rgba(0, 212, 255, 0.06); }
+
+.objEmoji { font-size: 1.2rem; }
+.objInfo  { flex: 1; }
+.objName  { font-weight: 600; }
+.objSub   { font-size: 0.75rem; color: var(--dim); }
+
+.objCount {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+}

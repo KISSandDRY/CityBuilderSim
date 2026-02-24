@@ -1,0 +1,71 @@
+.filterBar {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+  margin-bottom: .8rem;
+}
+
+.filterBtn {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .25rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  background: transparent;
+  color: var(--dim);
+  cursor: pointer;
+  transition: all .2s;
+}
+.filterBtn:hover { color: var(--accent); border-color: var(--accent); }
+.filterActive { color: var(--accent) !important; border-color: var(--accent) !important; background: rgba(0,212,255,.1) !important; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+}
+.type_house::before   { background: var(--accent);  }
+.type_biz::before     { background: var(--gold);    }
+.type_factory::before { background: var(--accent2); }
+.type_park::before    { background: var(--accent3); }
+.type_road::before    { background: var(--dim);     }
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.15);
+}
+.selected {
+  border-color: var(--accent) !important;
+  background: rgba(0, 212, 255, 0.08) !important;
+}
+
+.icon  { font-size: 2rem; margin-bottom: 0.4rem; }
+.name  { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+.cost  { font-size: 0.8rem; color: var(--dim); }
+.cost span { color: var(--gold); }
+.income { font-size: .75rem; color: var(--accent3); margin-top: .2rem; }
+.happy  { font-size: .75rem; margin-top: .1rem; }

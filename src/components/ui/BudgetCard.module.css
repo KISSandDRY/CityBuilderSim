@@ -1,0 +1,80 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+}
+
+.title {
+  font-family: 'Orbitron', monospace;
+  font-size: .78rem;
+  color: var(--dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.bigNum {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255,215,0,.35);
+}
+
+.subLabel {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--dim);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+/* Кільцева діаграма */
+.donutWrap {
+  position: relative;
+  width: 100px;
+  margin: 0 auto 1rem;
+}
+
+.donut { display: block; }
+
+.donutLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donutPct {
+  font-family: 'Orbitron', monospace;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--accent3);
+}
+
+.donutSub {
+  font-size: .65rem;
+  color: var(--dim);
+}
+
+/* Рядки */
+.rows { display: flex; flex-direction: column; gap: .4rem; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .35rem .6rem;
+  background: var(--bg3);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: .85rem;
+}
+
+.rowLabel { color: var(--dim); }
+.rowValue { font-weight: 700; font-family: 'Orbitron', monospace; font-size: .78rem; }

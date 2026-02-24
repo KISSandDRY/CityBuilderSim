@@ -1,0 +1,140 @@
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+}
+
+.card-title {
+  font-family: 'Orbitron', monospace;
+  font-size: .78rem;
+  color: var(--dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* ── Section title ───────────────────────────────────────────────────────── */
+.sec-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sec-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+}
+
+/* ── Button ──────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: 'Orbitron', monospace;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: .7rem 1.4rem;
+  border: 1px solid;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-primary  { background: rgba(0,212,255,.12);  border-color: var(--accent);  color: var(--accent);  }
+.btn-danger   { background: rgba(255,107,53,.1);  border-color: var(--accent2); color: var(--accent2); }
+.btn-success  { background: rgba(57,255,20,.1);   border-color: var(--accent3); color: var(--accent3); }
+.btn-primary:hover { background: rgba(0,212,255,.25); box-shadow: 0 0 20px rgba(0,212,255,.3); }
+.btn-danger:hover  { background: rgba(255,107,53,.2); }
+.btn-success:hover { background: rgba(57,255,20,.2);  }
+
+/* ── Notification ────────────────────────────────────────────────────────── */
+.notif {
+  padding: .7rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid;
+  font-size: .9rem;
+  font-weight: 600;
+  animation: fadeUp .3s ease;
+}
+.notif.success { border-color: var(--accent3); background: rgba(57,255,20,.08);  color: var(--accent3); }
+.notif.error   { border-color: var(--accent2); background: rgba(255,107,53,.08); color: var(--accent2); }
+
+/* ── Progress bar ────────────────────────────────────────────────────────── */
+.progress-wrap {}
+.progress-lbl  { display: flex; justify-content: space-between; font-size: .75rem; color: var(--dim); margin-bottom: .3rem; }
+.progress-bar  { height: 6px; background: var(--bg3); border-radius: 99px; overflow: hidden; border: 1px solid var(--border); }
+.progress-fill { height: 100%; border-radius: 99px; transition: width .5s ease; }
+
+/* ── Form ────────────────────────────────────────────────────────────────── */
+.form-group label {
+  display: block;
+  font-size: .8rem;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: .4rem;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: .6rem .9rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: .95rem;
+  transition: border-color .2s;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,212,255,.1);
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+
+/* ── Stat Box ────────────────────────────────────────────────────────────── */
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.stat-box {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .8rem;
+  text-align: center;
+}
+.stat-box .s-val {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+  margin-bottom: .2rem;
+}
+.stat-box .s-lbl { font-size: .73rem; color: var(--dim); text-transform: uppercase; letter-spacing: .5px; }
+
+/* ── Finance Table ───────────────────────────────────────────────────────── */
+.fin-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.fin-table th {
+  text-align: left;
+  padding: .4rem .6rem;
+  color: var(--dim);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  border-bottom: 1px solid var(--border);
+}
+.fin-table td { padding: .45rem .6rem; border-bottom: 1px solid rgba(26,45,74,.5); }
+.fin-table tr:hover td { background: var(--bg3); }
+.income  { color: var(--accent3); }
+.expense { color: var(--accent2); }

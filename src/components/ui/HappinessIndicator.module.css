@@ -1,0 +1,81 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+}
+
+.title {
+  font-family: 'Orbitron', monospace;
+  font-size: .78rem;
+  color: var(--dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.face {
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: .4rem;
+  filter: drop-shadow(0 0 12px rgba(57,255,20,.3));
+  transition: all .4s;
+}
+
+.pct {
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  transition: color .4s;
+}
+
+.level {
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 700;
+  margin-bottom: .2rem;
+  transition: color .4s;
+}
+
+.desc {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--dim);
+  margin-bottom: 1rem;
+}
+
+/* Сегментна шкала */
+.scale {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+
+.seg {
+  flex: 1;
+  height: 8px;
+  border-radius: 2px;
+  transition: background .4s;
+}
+
+/* Фактори */
+.factors {
+  border-top: 1px solid var(--border);
+  padding-top: .7rem;
+}
+
+.factorTitle {
+  font-size: .72rem;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .4rem;
+}
+
+.factor {
+  font-size: .82rem;
+  color: var(--text);
+  margin-bottom: .25rem;
+}
